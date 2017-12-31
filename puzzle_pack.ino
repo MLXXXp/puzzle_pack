@@ -186,6 +186,12 @@ extern void create_game3(Game & game);
 static char game_name[] = "Puzzle Pack";
 
 void setup() {
+  // turn off rx and tx led
+  pinMode(17, INPUT);
+  digitalWrite(17, LOW);
+  pinMode(30, INPUT);
+  digitalWrite(30, LOW);
+  
   arduboy.begin();
   arduboy.setFrameRate(30);
   arduboy.display();
